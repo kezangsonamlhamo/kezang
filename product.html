@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <html>
+    <body>
+        <nav>
+              <a href="kezang.html">home</a>
+        <a href="about.html">about</a>
+        <a href="product.html">product</a>
+        <a href="contact.html">contact us</a>
+        
+    </nav>
+        </nav>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #00796b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    .pollution-info {
+      background: #ffffff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #00796b;
+    }
+    .actions {
+      background: #ffffff;
+      padding: 15px;
+      border-left: 5px solid #388e3c;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      background: #388e3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #progressBar {
+      width: 100%;
+      background: #ccc;
+      margin-top: 10px;
+    }
+    #progress {
+      width: 0%;
+      height: 20px;
+      background: #4caf50;
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Eco Tracker</h1>
+    <p>Track your actions to reduce environmental pollution</p>
+  </header>
+
+  <div class="container">
+    <div class="pollution-info">
+      <h2>Types of Pollution</h2>
+      <ul>
+        <li><strong>Air Pollution:</strong> Emissions from vehicles and factories</li>
+        <li><strong>Water Pollution:</strong> Industrial waste, plastic dumping</li>
+        <li><strong>Soil Pollution:</strong> Pesticides, landfills, deforestation</li>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <h2>Log Your Eco Actions</h2>
+      <button onclick="logAction()">♻️ Recycled</button>
+      <button onclick="logAction()">🚲 Used Public Transport</button>
+      <button onclick="logAction()">🌱 Planted a Tree</button>
+
+      <div id="progressBar">
+        <div id="progress">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let progress = 0;
+    function logAction() {
+      if (progress < 100) {
+        progress += 10;
+        document.getElementById("progress").style.width = progress + "%";
+        document.getElementById("progress").textContent = progress + "%";
+      }
+    }
+  </script>
+</body>
+</html>
+
